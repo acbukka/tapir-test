@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <title>tapir-form</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
           <li class="tapir-item">
             <a href="#" class="tapir-item__link">Первая ссылка</a>
           </li>
-          <li class="tapir-item">
+          <li class="tapir-item active">
             <a href="#" class="tapir-item__link">Вторая ссылка (active)</a>
           </li>
           <li class="tapir-item">
@@ -30,6 +30,30 @@
         </ul>
         <div class="tapir__logo">
           <img src="./assets/logo.png" alt="">
+        </div>
+      </div>
+      <div class="tapir__form">
+        <h2 class="form__title">Заголовок страницы</h2>
+        <div class="form__data">
+          <div class="form__info">
+            <div class="form__info-titles">
+              <p class="form__info-acc">Номер счета</p>
+              <p class="form__info-sum">Сумма платежа</p>
+            </div>
+            <div class="form__info-nums">
+              <p class="form__info-acc__num">786 456 893993873</p>
+              <p class="form__info-sum__num">2 790</p>
+            </div>
+          </div>
+          <div class="form-card">
+            <h3 class="form-card__title">Номер карты</h3>
+            <div class="card__digits">
+              <input class="input" type="number" maxlength="4" name="card__digit1" />
+              <input class="input" type="number" maxlength="4" name="card__digit2" />
+              <input class="input" type="number" maxlength="4" name="card__digit3" />
+              <input class="input" type="number" maxlength="4" name="card__digit4" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
