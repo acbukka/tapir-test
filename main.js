@@ -2,6 +2,9 @@
 
 const linkItems = document.querySelectorAll('.tapir-item');
 const inputBox = document.querySelector(".card__digits");
+const cardInputs = document.querySelectorAll('.card__digits-input');
+const cardCVC = document.querySelector('.card__cvc-input');
+let cardsInputsValue = 0;
 
 linkItems.forEach((link) => {
   link.addEventListener('click', () => {
@@ -24,3 +27,13 @@ inputBox.addEventListener("input", function(e){
   }
 });
 
+cardCVC.addEventListener("input", function (e){
+  if (e.target.value.length > 3) {
+    e.target.value = e.target.value.slice(0, 3);
+  }
+})
+
+// cardInputs.forEach((input) => {
+//   cardsInputsValue += input.value;
+// })
+// console.log(cardsInputsValue);

@@ -89,7 +89,14 @@ body {
   color: #101114;
 }
 
-.form-card__title {
+.form-card {
+  margin-bottom: 23px;
+}
+
+.form-card__title,
+.card__owner__title,
+.card__timeout-title,
+.card__cvc-title {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 13px;
@@ -97,12 +104,32 @@ body {
   margin-bottom: 11px;
 }
 
-.input {
+.input,
+.select {
   background: #F0F0F0;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
   border: none;
+}
+
+option {
+  padding: 10px;
+}
+
+.select {
+  width: 70px;
+  height: 39px;
+  appearance: none;
+  background-position: calc(100% - 12px) center !important;
+  background: url("./assets/down-arrow.png") no-repeat;
+  background-color: #F0F0F0;
+  text-align: start;
+  padding-left: 16px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #101114;
 }
 
 .card__digits {
@@ -112,6 +139,42 @@ body {
   width: 70px;
   height: 39px;
   margin-right: 14px;
+}
+
+.card__owner {
+  margin-bottom: 23px;
+}
+
+.card__owner-input {
+  text-align: start;
+  padding: 12px 14px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.card__owner-input::placeholder {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #959595;
+}
+
+.card__timeout-select__month {
+  margin-right: 10px;
+}
+
+.card__subinfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__cvc-input {
+  text-align: start;
+  padding-left: 15px;
+  width: 70px;
+  height: 39px;
 }
 
 /*# sourceMappingURL=style.css.map */

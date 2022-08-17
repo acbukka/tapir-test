@@ -48,10 +48,69 @@
           <div class="form-card">
             <h3 class="form-card__title">Номер карты</h3>
             <div class="card__digits">
-              <input class="input" type="number" maxlength="4" name="card__digit1" />
-              <input class="input" type="number" maxlength="4" name="card__digit2" />
-              <input class="input" type="number" maxlength="4" name="card__digit3" />
-              <input class="input" type="number" maxlength="4" name="card__digit4" />
+              <input class="card__digits-input input" type="number" name="card__digit1" />
+              <input class="card__digits-input input" type="number" name="card__digit2" />
+              <input class="card__digits-input input" type="number" name="card__digit3" />
+              <input class="card__digits-input input" type="number" name="card__digit4" />
+            </div>
+          </div>
+          <div class="card__owner">
+            <h3 class="card__owner__title">Номер карты</h3>
+            <input class="card__owner-input input" type="text" placeholder="Иванов Иван Иванович">
+          </div>
+          <div class="card__subinfo">
+            <div class="card__timeout">
+              <h3 class="card__timeout-title">Срок действия</h3>
+              <select class="select card__timeout-select__month" name="">
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select class="select card__timeout-select__day" name="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+              </select>
+            </div>
+            <div class="card__cvc">
+              <h3 class="card__cvc-title">CVC</h3>
+              <input class="card__cvc-input input" type="number" name="card__digit1" />
             </div>
           </div>
         </div>
