@@ -194,6 +194,24 @@ option {
   font-size: 13.2px;
   line-height: 17px;
   color: #fff;
+  margin-bottom: 6px;
+}
+
+.validation__error,
+.validation__success {
+  display: none;
+  font-size: 12px;
+  width: 100%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.validation__error {
+  color: #ff5047;
+}
+
+.validation__success {
+  color: green;
 }
 
 // ADAPTIVE

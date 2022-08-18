@@ -1,10 +1,14 @@
 'use strict'
 
+//
 const linkItems = document.querySelectorAll('.tapir-item');
 const inputBox = document.querySelector(".card__digits");
 const cardCVC = document.querySelector('.card__cvc-input');
 const cardOwnerInput = document.querySelector('.card__owner-input');
 const cardInputs = document.querySelectorAll('.card__digits-input');
+const submitBtn = document.querySelector('.card__submit-btn');
+const validMessage = document.querySelector('.validation__success');
+const errorMessage = document.querySelector('.validation__error');
 
 
 linkItems.forEach((link) => {
@@ -13,7 +17,6 @@ linkItems.forEach((link) => {
       linkItem.classList.remove('active');
     })
     link.classList.add('active');
-    console.log('bam');
   })
 })
 
@@ -64,7 +67,52 @@ cardOwnerInput.addEventListener('input', function (e) {
   }
 })
 
-const submitData = function () {
+
+class checkDataMethods {
+
+  checkOwner() {
+    return cardOwnerInput.value.length > 4;
+  }
+
+  checkCard() {
+    let cardsInputsValue = '';
+    cardInputs.forEach((input) => {
+      cardsInputsValue += input.value;
+    })
+    return cardsInputsValue.length === 16;
+  }
+
+  checkCVC() {
+    return cardCVC.value.length === 3;
+  }
+
+  deleteMessage() {
+    setTimeout(() => {
+      validMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
+    }, 3000)
+  }
 
 }
 
+const checkData = new checkDataMethods();
+
+
+const submitData = function () {
+  let isValid = false;
+  if (checkData.checkCard() &&
+      checkData.checkOwner() &&
+      checkData.checkCVC()
+      ) {
+    isValid = true;
+  }
+  if (isValid) {
+    validMessage.style.display = 'block';
+    checkData.deleteMessage();
+  } else {
+    errorMessage.style.display = 'block';
+    checkData.deleteMessage();
+  }
+}
+
+submitBtn.addEventListener('click', submitData);
