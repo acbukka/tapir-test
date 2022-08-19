@@ -34,6 +34,7 @@ const getCardInputsValue = function () {
 // Добавим слушатель на инпуты в card__digits и настроим правила ввода, чтобы не принималось ничего кроме цифр
 // Также добавим переключение инпута ввода при полном заполнении поля инпута
 inputBox.addEventListener("input", function(e){
+  e.target.value = e.target.value.replace(/[^0-9\s]/g,'');
   let cardInput = e.target;
   if (cardInput.value.length > 4) {
     cardInput.value = cardInput.value.slice(0, 4);
